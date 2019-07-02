@@ -11,5 +11,13 @@ pipeline {
         sh 'echo "jenkins job ocean blue"'
       }
     }
+    stage('Run App') {
+      steps {
+        dir(path: 'flask-app') {
+          sh 'docker-compose up -d --build'
+        }
+
+      }
+    }
   }
 }

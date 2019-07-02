@@ -6,7 +6,7 @@ pipeline {
 
   }
   stages {
-    stage('jenkins job ocean blue') {
+    stage('Echo Some Text') {
       steps {
         sh 'echo "jenkins job ocean blue"'
       }

@@ -24,7 +24,7 @@ pipeline {
         sh '''cd flask-app
 docker-compose down
 docker-compose build flask-app
-docker-compose run flask-app pytest -v
+docker-compose run flask-app pytest -v --junit-xml=/var/opt/junit-report/report.xml
 docker-compose down
 '''
       }

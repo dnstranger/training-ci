@@ -29,5 +29,11 @@ docker-compose down
 '''
       }
     }
+    stage('Archive JUnit-formatted test results') {
+      steps {
+        sh '''sudo rm -rf flask-app/junit-report
+'''
+      }
+    }
   }
 }

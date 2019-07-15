@@ -21,7 +21,8 @@ pipeline {
     }
     stage('Run Application Tests') {
       steps {
-        sh '''docker-compose down
+        sh '''pwd
+docker-compose down
 docker-compose build flask-app
 docker-compose run flask-app pytest -v
 docker-compose down

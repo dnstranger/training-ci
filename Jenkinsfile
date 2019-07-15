@@ -19,7 +19,7 @@ pipeline {
 
       }
     }
-    stage('Change Current Dir') {
+    stage('Run Application Tests') {
       steps {
         sh '''docker-compose down
 docker-compose build flask-app

@@ -27,6 +27,7 @@ docker-compose build flask-app
 docker-compose run flask-app pytest -v --junit-xml=/var/opt/junit-report/report.xml
 docker-compose down
 '''
+        sh 'flask-app/junit-report/report.xml'
       }
     }
   }
